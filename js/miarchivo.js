@@ -8,8 +8,13 @@ let producto
 function bienvenida() {
     nombre = prompt("Ingrese su nombre");
     apellido = prompt("Ingrese su apellido");
-    let mensaje = "Bienvenido " + nombre + " " + apellido + ", a una de las tiendas mas llamativas de ropa en Argentina! A continuacion podra realizar su compra.";
-    alert(mensaje)
+    if ((nombre == "") || (apellido == "")) {
+        alert("Debe completar ambos campos: Nombre y Apellido");
+        bienvenida()
+    } else {
+        let mensaje = "Bienvenido " + nombre + " " + apellido + ", a una de las tiendas mas llamativas de ropa en Argentina! A continuacion podra realizar su compra.";
+        alert(mensaje);
+    }
 }
 
 // definiendo funcion de remeras
